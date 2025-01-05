@@ -55,7 +55,7 @@ async def start_screen():
         mainsurface.blit(title,(180,100))    
 
         pygame.display.update()
-        # await asyncio.sleep(0)
+        await asyncio.sleep(0)
 
 
 async def main():

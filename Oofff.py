@@ -13,11 +13,8 @@ class Room:
             self.filename.append(roomInfo2[1])
             self.rectlist.append(roomInfo2[2])
             
-
-
     def clicked(self, mouse_pos,itemlist):
 
-        
         for rect in self.rectlist[self.state]:
 
             # mou_pos is mouse coordinate
