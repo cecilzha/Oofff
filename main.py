@@ -1,15 +1,19 @@
-import sys,pygame,time,Oofff,roomloader
+import sys,pygame,roomloader
+import asyncio
 
 RED=(255,0,0)
 #missing hallwayright(lvl2)
 #missing Mr.Veech
 #missing Ms.Khin
 
-def start_screen():
+async def start_screen():
     pygame.init()
     pygame.mixer.pre_init(44100, -16, 1, 512)
 
-    pygame.mixer.music.load('mainsong.mp3')
+    if sys.platform == 'emscripten':
+        pygame.mixer.music.load('mainsong.ogg')
+    else:
+        pygame.mixer.music.load('mainsong.mp3')
     pygame.mixer.music.play(-1)
     
     mainsurface=pygame.display.set_mode((800,533))
@@ -36,19 +40,14 @@ def start_screen():
                     pygame.mixer.quit()
                     done = True
                     
-                
-            
-        
         x = x+deltax
         y = y +deltay
 
-        
         if x<=0 or x>=750:
             deltax = -deltax
         if y<=0 or y>=488:
             deltay = -deltay
-        
-
+    
         mainsurface.fill((0,0,0))
         mainsurface.blit(logo,(x,y))
        # mainsurface.blit(box,(250,300))
@@ -56,9 +55,12 @@ def start_screen():
         mainsurface.blit(title,(180,100))    
 
         pygame.display.update()
+        # await asyncio.sleep(0)
 
 
-def main():
+async def main():
+    await start_screen()
+
     pygame.init()
     surface_height = 668
     surface_width = 800
@@ -84,6 +86,7 @@ def main():
     currentroom = roomslist[0]
     
     while True:
+        await asyncio.sleep(0)
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
@@ -93,14 +96,8 @@ def main():
                 pos = pygame.mouse.get_pos()
                 currentroomindex=currentroom.clicked(pos,itemlist)
 
-                
-                
-                
-
         currentroom=roomslist[currentroomindex]
                 
-        
-        
         main_surface.fill((0,0,0))
         currentroom.draw(main_surface)
         
@@ -119,7 +116,7 @@ def main():
         #pygame.draw.rect(main_surface,RED,currentroom.rectlist[0][1][0:4])
         
         pygame.display.flip()
+        await asyncio.sleep(0)
 
 if __name__=='__main__':
-    start_screen()
-    main()
+    asyncio.run(main())
