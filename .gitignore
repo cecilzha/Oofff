@@ -1,8 +1,18 @@
+# Python
+__pycache__/
+
+# IDEs and Editors
+.vscode/
+.idea
+
+# Build directories
+/build
+/dist
+
+# pygbag
 .DS_Store
 *.wav
 *.mp3
 *.pyc
 *.egg-info
 *-pygbag.???
-/build
-/dist
