@@ -45,7 +45,6 @@ class Room:
         return self.index     
 
     def draw(self, SCREEN):
-        print(os.listdir('/data/data/oofff-main/assets/images/'))
         base = os.path.abspath(os.getcwd())
         image = pygame.image.load(base + "/images/{0}.jpg".format(self.filename[self.state]))
         SCREEN.blit(image,(0,0))

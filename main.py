@@ -41,7 +41,7 @@ async def start_screen():
                     done = True
                     
         x = x+deltax
-        y = y +deltay
+        y = y+deltay
 
         if x<=0 or x>=750:
             deltax = -deltax
@@ -62,6 +62,11 @@ async def main():
     await start_screen()
 
     pygame.init()
+
+    # stop music specifically for emscripten
+    if sys.platform == 'emscripten':
+        pygame.mixer.music.stop()
+
     surface_height = 668
     surface_width = 800
     main_surface = pygame.display.set_mode((surface_width,surface_height))
@@ -69,20 +74,19 @@ async def main():
     UI=pygame.image.load('Ui1.png')
     arrow=pygame.image.load("arrow.png")
     keys_cabinet = pygame.image.load("keys_cabinet.png")
+    keys_1 = pygame.image.load("keys_1.png")
+    keys_2 = pygame.image.load("keys_2.png")
+    keys_3 = pygame.image.load("keys_3.png")
     gas_can = pygame.image.load('gascanicon.jpg')
     
-
     roomslist = []
     itemlist = []
-    imagelist = [keys_cabinet,keys_cabinet,gas_can,keys_cabinet,keys_cabinet]
+    imagelist = [keys_1,keys_2,gas_can,keys_cabinet,keys_3]
     
     backbuttonrect = 325,500,150,40
 
     roomslist=roomloader.loadrooms()
-    
-    
-    currentroomindex=65
-        
+    currentroomindex=65    
     currentroom = roomslist[0]
     
     while True:

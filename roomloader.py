@@ -144,7 +144,7 @@ def loadrooms():
                            #state pics haven't been taken
     room = Oofff.Room([28,'room28_1_b2_securitydesk',[backbuttonrect+[6,-1,-1,-1],
                                                     [342,249,248,153,28,1,-1,1]]],
-                      [28,'room28_1_b2_securitydesk',[backbuttonrect+[6,-1,-1,-1]]])
+                      [28,'room28_0_b2_securitydesk',[backbuttonrect+[6,-1,-1,-1]]])
     roomslist.append(room)
 
     room = Oofff.Room([29,'room29_b2_stairs',[backbuttonrect+[23,-1,-1,-1],

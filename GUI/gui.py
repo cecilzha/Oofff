@@ -1,7 +1,5 @@
 import pygame,sys
 
-
-
 def main():
     pygame.init()
     mainsurface=pygame.display.set_mode((800,533))
