@@ -2,7 +2,7 @@
 
 Created by Yangon Academy Programming Class 2018-19
 
-This is a collaborative class project to create an interactive mini game of navigating a post-apocalyptic themed Yangon Academy. The game is originally written in Python and uses the Pygame library. The program is converted to a WASM file using Pygbag to run on a web browser. Check out web version of the game [here](https://cecilzha.github.io/yapocalypse).
+This is a collaborative class project to create an interactive mini game of navigating a post-apocalyptic themed Yangon Academy. The game is originally written in Python and uses the Pygame library. The program is converted to a WASM file using Pygbag to run on a web browser. Check out web version of the game [here](https://cecilzha.github.io/YApocalypse).
 
 
 <details>
