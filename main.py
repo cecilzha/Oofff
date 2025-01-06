@@ -73,15 +73,22 @@ async def main():
 
     UI=pygame.image.load('Ui1.png')
     arrow=pygame.image.load("arrow.png")
+
+    # maintenance = 0
+    # universal_keys = 1
+    # gasoline = 2
+    # physics_keys = 3
+    # elevator_keys = 4
+
     keys_cabinet = pygame.image.load("keys_cabinet.png")
+    keys_0 = pygame.image.load("keys_0.png")
     keys_1 = pygame.image.load("keys_1.png")
-    keys_2 = pygame.image.load("keys_2.png")
-    keys_3 = pygame.image.load("keys_3.png")
+    keys_4 = pygame.image.load("keys_4.png")
     gas_can = pygame.image.load('gascanicon.jpg')
     
     roomslist = []
     itemlist = []
-    imagelist = [keys_1,keys_2,gas_can,keys_cabinet,keys_3]
+    imagelist = [keys_0,keys_1,gas_can,keys_cabinet,keys_4]
     
     backbuttonrect = 325,500,150,40
 
