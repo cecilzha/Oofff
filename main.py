@@ -77,15 +77,15 @@ async def main():
     # elevator_keys = 4
 
     keys_cabinet = pygame.image.load("keys_cabinet.png")
-    # keys_0 = pygame.image.load("keys_0.png")
-    # keys_1 = pygame.image.load("keys_1.png")
-    # keys_4 = pygame.image.load("keys_4.png")
+    keys_0 = pygame.image.load("keys_0.png")
+    keys_1 = pygame.image.load("keys_1.png")
+    keys_4 = pygame.image.load("keys_4.png")
     gas_can = pygame.image.load('gascanicon.jpg')
     
     roomslist = []
     itemlist = []
-    imagelist = [keys_cabinet,keys_cabinet,gas_can,keys_cabinet,keys_cabinet]
-    # imagelist = [keys_0,keys_1,gas_can,keys_cabinet,keys_4]
+    # imagelist = [keys_cabinet,keys_cabinet,gas_can,keys_cabinet,keys_cabinet]
+    imagelist = [keys_0,keys_1,gas_can,keys_cabinet,keys_4]
     
     backbuttonrect = 325,500,150,40
 
