@@ -4,7 +4,7 @@ This is a collaborative class project to create an interactive mini game of navi
 
 ## For Developers
 
-The original Python code is available on the `main` branch. The `web` branch contains the web version of the game.
+The original Python code is available on the `archive` branch. The `web` branch contains the web version of the game.
 
 ### Running the Game Using Pygbag
 
