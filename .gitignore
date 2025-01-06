@@ -4,3 +4,5 @@
 *.pyc
 *.egg-info
 *-pygbag.???
+/build
+/dist
