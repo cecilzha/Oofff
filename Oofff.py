@@ -46,7 +46,7 @@ class Room:
 
     def draw(self, SCREEN):
         base = os.path.abspath(os.getcwd())
-        print(os.listdir(base))
+        print(os.listdir(base + "/images"))
         image = pygame.image.load(base + "/images/{0}.jpg".format(self.filename[self.state]))
         SCREEN.blit(image,(0,0))
 
