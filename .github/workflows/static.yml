@@ -43,7 +43,7 @@ jobs:
           pip install -r requirements.txt
       - name: Generate static HTML
         run: |
-          python -m pygbag main.py --build
+          python -m pygbag --build main.py
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
