@@ -19,7 +19,7 @@ async def start_screen():
     text=fonte2.render('Press Enter To Start',True,(179,39,20))
     title=fonte.render('YAPOCALYPSE',True,(225,225,225))
     logo = pygame.image.load('logo.png')
-    box = pygame.image.load('Bio.png')
+    box = pygame.image.load('bio.png')
     (x,y) = (0,0)
     (deltax,deltay) = (5,5)
     done = False
@@ -67,7 +67,7 @@ async def main():
     surface_width = 800
     main_surface = pygame.display.set_mode((surface_width,surface_height))
 
-    UI=pygame.image.load('Ui1.png')
+    UI=pygame.image.load('ui1.png')
     arrow=pygame.image.load("arrow.png")
 
     # maintenance = 0
