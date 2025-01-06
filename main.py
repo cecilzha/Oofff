@@ -9,11 +9,7 @@ RED=(255,0,0)
 async def start_screen():
     pygame.init()
     pygame.mixer.pre_init(44100, -16, 1, 512)
-
-    if sys.platform == 'emscripten':
-        pygame.mixer.music.load('mainsong.ogg')
-    else:
-        pygame.mixer.music.load('mainsong.mp3')
+    pygame.mixer.music.load('mainsong.ogg')
     pygame.mixer.music.play(-1)
     
     mainsurface=pygame.display.set_mode((800,533))
