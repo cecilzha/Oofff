@@ -63,9 +63,9 @@ async def main():
 
     pygame.init()
 
-    # # stop music specifically for emscripten
-    # if sys.platform == 'emscripten':
-    #     pygame.mixer.music.stop()
+    # stop music specifically for emscripten
+    if sys.platform == 'emscripten':
+        pygame.mixer.music.stop()
 
     surface_height = 668
     surface_width = 800
